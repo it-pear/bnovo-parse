@@ -2,6 +2,8 @@
 
 A Quasar Project
 
+nodejs -v 18.15.0
+
 ## Install the dependencies
 ```bash
 yarn
