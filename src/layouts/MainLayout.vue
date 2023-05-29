@@ -2,19 +2,15 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
         <q-toolbar-title>
-          Quasar App
+          Bnovo - parse
         </q-toolbar-title>
 
+        <q-icon
+          :name="`svguse:icons/allIcons.svg#logout`"
+          size="18px"
+          style="cursor: pointer;"
+        />
       </q-toolbar>
     </q-header>
 
@@ -44,21 +40,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue'
 
 const essentialLinks: EssentialLinkProps[] = [
   {
     title: 'Аккаунты',
-    caption: 'quasar.dev',
     icon: 'users',
-    link: ''
+    link: '/users'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: ''
+    title: 'Данные',
+    icon: 'list',
+    link: '/list'
   }
 ]
 

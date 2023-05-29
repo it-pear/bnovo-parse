@@ -1,20 +1,21 @@
 <template>
   <q-item
     clickable
-    tag="a"
-    target="_blank"
-    :href="link"
+    :to="link"
   >
     <q-item-section
       v-if="icon"
       avatar
+      class="items-center justify-center"
     >
-      <q-icon :name="icon" />
+      <q-icon
+        :name="`svguse:icons/allIcons.svg#${icon}`"
+        size="24px"
+      />
     </q-item-section>
 
-    <q-item-section>
+    <q-item-section class="justify-center">
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
     </q-item-section>
   </q-item>
 </template>

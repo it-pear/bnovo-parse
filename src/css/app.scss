@@ -1,1 +1,44 @@
 // app global css in SCSS form
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.q-page {
+  padding: 40px;
+  min-height: max-content !important;
+  @media (max-width: 772px) {
+    padding: 20px;
+  }
+}
+
+.page-users {
+  .user-list {
+    .my-card {
+      flex: 1;
+      min-width: max-content;
+      padding-right: 35px;
+      @media (min-width: 772px) {
+        &:nth-child(1n) {
+          margin-right: 7.5px;
+        }
+        &:nth-child(2n) {
+          margin-left: 7.5px;
+          margin-right: 0;
+        }
+      }
+      .q-card__section {
+        position: relative;
+        .btn-custom {
+          position: absolute;
+          right: -25px;
+          top: 10px;
+        }
+        .btn-del {
+          position: absolute;
+          right: -25px;
+          bottom: 10px;
+        }
+      }
+    }
+  }
+}
