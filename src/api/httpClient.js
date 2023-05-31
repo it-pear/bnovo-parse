@@ -7,7 +7,7 @@ function logOut () {
 }
 
 const config = {
-  baseURL: ""
+  baseURL: "http://45.12.237.254:4000/api"
 }
 
 const httpClient = axios.create(config)
@@ -33,6 +33,7 @@ if (token) {
       }
       if (err === 403) {
         console.log('Нет доступа')
+        logOut()
       }
       if (err === 404) {
         console.log('Не найдено')

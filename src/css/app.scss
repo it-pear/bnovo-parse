@@ -18,13 +18,7 @@ body {
       min-width: max-content;
       padding-right: 35px;
       @media (min-width: 772px) {
-        &:nth-child(1n) {
-          margin-right: 7.5px;
-        }
-        &:nth-child(2n) {
-          margin-left: 7.5px;
-          margin-right: 0;
-        }
+        margin-right: 15px;
       }
       .q-card__section {
         position: relative;

@@ -10,6 +10,7 @@
           :name="`svguse:icons/allIcons.svg#logout`"
           size="18px"
           style="cursor: pointer;"
+          @click="logout"
         />
       </q-toolbar>
     </q-header>
@@ -42,6 +43,10 @@
 <script setup lang="ts">
 // import { ref } from 'vue'
 import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue'
+import { authApi } from 'src/api/auth.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const essentialLinks: EssentialLinkProps[] = [
   {
@@ -55,5 +60,10 @@ const essentialLinks: EssentialLinkProps[] = [
     link: '/list'
   }
 ]
+
+const logout = async () => {
+  await authApi.doLogout()
+  router.push('/login')
+}
 
 </script>

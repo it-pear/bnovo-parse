@@ -33,7 +33,7 @@
 <script setup lang="ts">
 // import { ref } from 'vue'
 import { ref } from 'vue'
-import useQuasar from 'quasar/src/composables/use-quasar.js'
+import { useQuasar } from 'quasar'
 import { authApi } from 'src/api/auth.js'
 
 const $q = useQuasar()
@@ -41,7 +41,7 @@ const loading = ref(false)
 
 const formData = ref({
   username: 'admin',
-  password: '12345678'
+  password: 'GtOR12s'
 })
 
 async function onSubmit () {
@@ -54,7 +54,7 @@ async function onSubmit () {
       message: 'Вы успешно вошли'
     })
     setTimeout(() => {
-      window.location.href = '/home'
+      window.location.href = '/'
     }, 1000)
   } catch (err) {
     console.log(err)
@@ -63,8 +63,9 @@ async function onSubmit () {
       textColor: 'white',
       message: 'email или пароль неправильные'
     })
+  } finally {
+    loading.value = false
   }
-  loading.value = false
 }
 
 </script>
