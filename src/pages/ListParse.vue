@@ -149,7 +149,7 @@ const query: Ref<Iquery> = ref({
   h: null,
   sn: null,
   st: null,
-  a: null,
+  a: new Date().toISOString(),
   as: null,
   ae: null
 })
@@ -232,6 +232,7 @@ watch([
 
 onMounted(async () => {
   $q.loading.show()
+  getData.value = query.value.a.split('T')[0]
   await getHotels()
   await getList()
   await getCount()
