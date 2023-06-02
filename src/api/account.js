@@ -12,6 +12,7 @@ export const accountApi = {
         id: item.id.toString(),
         username: item.username.split('@')[0],
         password: item.password,
+        is_active: item.is_active
       }))
       return data
     } catch (err) {

@@ -129,7 +129,8 @@ const columns = [
   { name: 'name', align: 'left', label: 'Имя клиента', field: 'name', sortable: false },
   { name: 'surname', align: 'left', label: 'Фамилия клиента', field: 'surname', sortable: false },
   { name: 'phone', align: 'left', label: 'Телефон клиента', field: row => row.client.phone, sortable: false },
-  { name: 'email', align: 'left', label: 'Email клиента', field: row => row.client.email, sortable: false }
+  { name: 'email', align: 'left', label: 'Email клиента', field: row => row.client.email, sortable: false },
+  { name: 'arrival', align: 'left', label: 'Дата', field: row => row.arrival.split('T')[0], sortable: false }
 ]
 
 const rows: Ref<IBooking[]> = ref([])

@@ -5,6 +5,7 @@ export interface Iusers {
   id?: string
   username: string
   password: string
+  is_active?: boolean
 }
 
 export interface IClient {

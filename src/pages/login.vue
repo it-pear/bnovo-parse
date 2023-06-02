@@ -40,8 +40,8 @@ const $q = useQuasar()
 const loading = ref(false)
 
 const formData = ref({
-  username: 'admin',
-  password: 'GtOR12s'
+  username: '',
+  password: ''
 })
 
 async function onSubmit () {

@@ -14,6 +14,7 @@
         class='my-card q-mb-md'
         v-for='user in users'
         :key='user.username'
+        :class="{'bg-warning': !user.is_active}"
       >
         <q-card-section>
           <q-btn round color="primary" icon="edit" class="btn-custom" size="10px" @click="openUpdateUser(user)" />
